@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Cadastro de Voluntário - ONG Adoção de Animais</title>
+    <meta
+      name="description"
+      content="Cadastre-se para se tornar voluntário na ONG Adoção de Animais e ajude a transformar a vida de diversos animais resgatados."
+    />
+    <meta name="author" content="Ricardo Oscar Borges" />
+    <meta
+      name="keywords"
+      content="ONG, adoção de animais, voluntariado, cadastro, ajuda a animais, inscrição voluntário"
+    />
+
+    <!-- CSS e JS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/mascaras.js" defer></script>
+    <script src="js/cadastro.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial da ONG">
+          <img src="img/logo.png" alt="Logo da ONG" width="150" />
+        </a>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html">Voluntariado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero-voluntariado">
+      <h1>Cadastro de Voluntário</h1>
+      <p>Preencha o formulário abaixo e faça parte da nossa equipe de voluntários.</p>
+    </section>
+
+    <!-- ================= FORMULÁRIO ================= -->
+    <main>
+      <section class="cadastro-voluntario">
+        <form id="form-voluntario" action="javascript:void(0)" method="post" novalidate>
+          <!-- Informações Pessoais -->
+          <fieldset>
+            <legend>Informações Pessoais</legend>
+
+            <label for="nome">Nome completo:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@dominio.com"
+              required
+            />
+
+            <label for="cpf">CPF:</label>
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              placeholder="000.000.000-00"
+              required
+            />
+
+            <label for="telefone">Telefone:</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(00) 00000-0000"
+              required
+            />
+
+            <label for="cep">CEP:</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              placeholder="00000-000"
+              required
+            />
+          </fieldset>
+
+          <!-- Habilidades e Experiência -->
+          <fieldset>
+            <legend>Habilidades e Experiência</legend>
+
+            <label for="habilidades">Habilidades:</label>
+            <textarea
+              id="habilidades"
+              name="habilidades"
+              placeholder="Digite suas habilidades"
+              required
+            ></textarea>
+
+            <label for="experiencia">Experiência prévia:</label>
+            <textarea
+              id="experiencia"
+              name="experiencia"
+              placeholder="Descreva sua experiência anterior"
+              required
+            ></textarea>
+          </fieldset>
+
+          <!-- Disponibilidade -->
+          <fieldset>
+            <legend>Disponibilidade</legend>
+            <label>Dias da semana:</label><br />
+            <label><input type="checkbox" name="dias" value="Segunda" /> Segunda</label>
+            <label><input type="checkbox" name="dias" value="Terça" /> Terça</label>
+            <label><input type="checkbox" name="dias" value="Quarta" /> Quarta</label>
+            <label><input type="checkbox" name="dias" value="Quinta" /> Quinta</label>
+            <label><input type="checkbox" name="dias" value="Sexta" /> Sexta</label>
+            <label><input type="checkbox" name="dias" value="Sábado" /> Sábado</label>
+            <label><input type="checkbox" name="dias" value="Domingo" /> Domingo</label>
+          </fieldset>
+
+          <button type="submit">Enviar Cadastro</button>
+        </form>
+
+        <!-- Mensagem de sucesso -->
+        <div id="mensagem-cadastro" style="display: none; margin-top: 1rem; color: green"></div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 ONG Adoção de Animais. Todos os direitos reservados.</p>
+      <nav aria-label="Links de rodapé">
+        <a href="projetos.html">Projetos</a> |
+        <a href="voluntariado.html">Voluntariado</a>
+      </nav>
+    </footer>
+  </body>
+</html>

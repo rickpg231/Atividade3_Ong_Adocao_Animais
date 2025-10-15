@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Voluntariado - ONG Adoção de Animais</title>
+    <meta
+      name="description"
+      content="Participe do voluntariado da ONG Adoção de Animais. Descubra como ajudar animais resgatados, assistir vídeos institucionais e se cadastrar como voluntário."
+    />
+    <meta name="author" content="Ricardo Oscar Borges" />
+    <meta
+      name="keywords"
+      content="ONG, voluntariado, ajuda a animais, cadastro voluntário, vídeos institucionais, depoimentos"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/mascaras.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial da ONG">
+          <img src="img/logo.png" alt="Logo da ONG de Adoção de Animais" width="150" />
+        </a>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html" class="active">Voluntariado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app-content">
+        
+        <section class="hero-voluntariado">
+          <h1>Seja um Voluntário</h1>
+          <p>Descubra como participar e ajudar os animais em nossa ONG.</p>
+        </section>
+
+        <section class="voluntariado-content-wrapper"> 
+            <section class="video-item">
+              <h2>Vídeo Institucional</h2>
+              <video controls preload="metadata" style="width: 100%">
+                <source src="media/video_institucional.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+            </section>
+
+            <section class="video-item">
+              <h2>Resgates Recentes</h2>
+              <video controls preload="metadata" style="width: 100%">
+                <source src="media/video_resgate.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+            </section>
+
+            <section class="video-item">
+              <h2>Voluntariado em Ação</h2>
+              <video controls preload="metadata" style="width: 100%">
+                <source src="media/video_voluntariado.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+            </section>
+
+            <section class="audio-item">
+              <h2>Depoimentos de Voluntários</h2>
+
+              <p>Ana:</p>
+              <audio controls>
+                <source src="media/ana.mp3" type="audio/mpeg" />
+              </audio>
+
+              <p>Carlos:</p>
+              <audio controls>
+                <source src="media/carlos.mp3" type="audio/mpeg" />
+              </audio>
+            </section>
+
+            <section class="mapa-ong">
+              <h2>Localização da ONG</h2>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.482346381758!2d-46.575978687762614!3d-23.622891063769508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ced4b40dd37%3A0x7e63e7e0ca275f9a!2sOng%20Sos%20Cidadania%20Animal%20-%20Cl%C3%ADnica%20Veterin%C3%A1ria%20Popular!5e0!3m2!1spt-BR!2sbr!4v1759713320040!5m2!1spt-BR!2sbr"
+                width="600"
+                height="450"
+                style="border:0"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa da ONG"
+              ></iframe>
+            </section>
+
+            <section class="cadastro-voluntario">
+              <h2>Cadastro de Voluntário</h2>
+              <button
+                id="btn-cadastro"
+                onclick="window.location.href='cadastro.html'"
+              >
+                Quero me cadastrar como voluntário
+              </button>
+            </section>
+        </section> </main>
+    <footer>
+      <p>© 2025 ONG Adoção de Animais. Todos os direitos reservados.</p>
+      <nav aria-label="Links de rodapé">
+        <a href="index.html">Início</a> |
+        <a href="projetos.html">Projetos</a>
+      </nav>
+    </footer>
+
+    <script src="js/spa.js"></script>
+  </body>
+</html>

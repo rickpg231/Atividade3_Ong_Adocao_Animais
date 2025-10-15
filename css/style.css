@@ -1,0 +1,550 @@
+/* =========================================================
+   ONG Adoção de Animais - CSS3 Responsivo com Design System
+   ========================================================= */
+
+/* ===== VARIÁVEIS DO DESIGN SYSTEM ===== */
+:root {
+  /* Paleta de cores (8 cores) */
+  --cor-primaria: #2a7ae4;
+  --cor-secundaria: #ffb703;
+  --cor-terciaria: #219ebc;
+  --cor-sucesso: #38b000;
+  --cor-erro: #d90429;
+  --cor-alerta: #f48c06;
+  --cor-fundo: #f9fafc;
+  --cor-texto: #333333;
+  --cor-neutra: #f7f7f7;
+  --cor-clara: #ffffff;
+
+  /* Tipografia (5 tamanhos) */
+  --fonte-principal: 'Poppins', Arial, sans-serif;
+  --fs-xl: 2.5rem;
+  --fs-lg: 1.75rem;
+  --fs-md: 1.125rem;
+  --fs-sm: 1rem;
+  --fs-xs: 0.875rem;
+
+  /* Espaçamento modular (8px, 16px, 24px, 32px, 48px, 64px) */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+
+  /* Grid */
+  --gap: 16px;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--fs-sm);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--esp-2) var(--esp-3);
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header .logo img {
+  width: 150px;
+  height: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--esp-3);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: var(--esp-2);
+  right: var(--esp-2);
+}
+
+/* Submenu dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .submenu {
+  display: none;
+  position: absolute;
+  background: var(--cor-clara);
+  list-style: none;
+  padding: var(--esp-2);
+  border-radius: var(--esp-2);
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 180px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.dropdown .submenu li {
+  margin: 4px 0;
+}
+
+.dropdown .submenu li a {
+  color: var(--cor-texto);
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: var(--esp-4);
+  padding: var(--esp-5) var(--esp-3);
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-terciaria));
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: var(--esp-2);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--esp-2);
+}
+
+.hero-text p {
+  font-size: var(--fs-md);
+  margin-bottom: var(--esp-3);
+}
+
+/* ===== BANNER SECUNDÁRIO ===== */
+.banner-secundario img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--esp-2);
+}
+
+/* ===== CTA DOAR ===== */
+.cta-doar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: var(--esp-4);
+  padding: var(--esp-5) var(--esp-3);
+  background-color: var(--cor-clara);
+}
+
+.cta-doar img {
+  width: 100%;
+  border-radius: var(--esp-2);
+}
+
+.cta-doar .cta-text {
+  text-align: left;
+}
+
+.cta-doar h2 {
+  font-size: var(--fs-lg);
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-2);
+}
+
+.cta-doar p {
+  margin-bottom: var(--esp-3);
+  font-size: var(--fs-md);
+}
+
+/* ===== FLEXBOX APÓS IMAGEM CTA ===== */
+.index-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--esp-4);
+  padding: var(--esp-5) var(--esp-3);
+  background-color: var(--cor-neutra);
+}
+
+.index-flex .card {
+  background: var(--cor-clara);
+  border-radius: var(--esp-2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: var(--esp-3);
+  transition: transform 0.3s ease;
+}
+
+.index-flex .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== BOTÕES ===== */
+.btn,
+a.btn {
+  display: inline-block;
+  background-color: var(--cor-secundaria);
+  color: white;
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--cor-terciaria);
+}
+
+/* ===== SEÇÕES PRINCIPAIS ===== */
+main section {
+  text-align: center;
+  padding: var(--esp-5) var(--esp-3);
+  background-color: var(--cor-clara);
+  margin-bottom: var(--esp-4);
+  border-radius: var(--esp-2);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+  font-size: var(--fs-lg);
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-2);
+}
+
+main p {
+  margin-bottom: var(--esp-3);
+  font-size: var(--fs-md);
+}
+
+main .link {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main .link:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--cor-primaria);
+  color: white;
+  text-align: center;
+  padding: var(--esp-4);
+  margin-top: var(--esp-5);
+}
+
+footer a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== GRID 12 COLUNAS ===== */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+}
+
+[class^="col-"] {
+  grid-column: span 12; /* padrão mobile */
+}
+
+@media (min-width: 768px) {
+  .col-1 { grid-column: span 1; }
+  .col-2 { grid-column: span 2; }
+  .col-3 { grid-column: span 3; }
+  .col-4 { grid-column: span 4; }
+  .col-5 { grid-column: span 5; }
+  .col-6 { grid-column: span 6; }
+  .col-7 { grid-column: span 7; }
+  .col-8 { grid-column: span 8; }
+  .col-9 { grid-column: span 9; }
+  .col-10 { grid-column: span 10; }
+  .col-11 { grid-column: span 11; }
+  .col-12 { grid-column: span 12; }
+}
+
+/* ===== RESPONSIVIDADE - 5 BREAKPOINTS ===== */
+@media (max-width: 1440px) { /* Desktop grande */ }
+@media (max-width: 1200px) { /* Desktop médio */ }
+@media (max-width: 992px) { /* Tablet horizontal */
+  header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) { /* Tablet vertical */
+  .cta-doar {
+    text-align: center;
+  }
+
+  .index-flex .card {
+    width: 90%;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    padding: var(--esp-2);
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (max-width: 576px) { /* Celular */
+  .hero {
+    padding: var(--esp-4);
+  }
+
+  main section {
+    padding: var(--esp-4);
+  }
+}
+@media (max-width: 400px) {
+  header nav ul {
+    gap: var(--esp-2);
+    align-items: center;
+  }
+}
+
+/* ================= CADASTRO VOLUNTÁRIO ================= */
+.cadastro-voluntario {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.cadastro-voluntario form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ================= FIELDSETS ================= */
+.cadastro-voluntario fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.cadastro-voluntario legend {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #2a7ae4;
+}
+
+/* ================= LABELS E INPUTS ================= */
+.cadastro-voluntario label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.cadastro-voluntario input[type="text"],
+.cadastro-voluntario input[type="email"],
+.cadastro-voluntario input[type="tel"],
+.cadastro-voluntario textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.cadastro-voluntario input:focus,
+.cadastro-voluntario textarea:focus {
+  outline: none;
+  border-color: #2a7ae4;
+}
+
+/* ================= CHECKBOXES DIAS DA SEMANA ================= */
+.cadastro-voluntario fieldset:nth-of-type(3) label input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+
+.cadastro-voluntario fieldset:nth-of-type(3) label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ================= BOTÃO ENVIAR ================= */
+.cadastro-voluntario button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #2a7ae4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cadastro-voluntario button[type="submit"]:hover {
+  background-color: #1e5bb8;
+}
+
+/* ================= HERO CADASTRO ================= */
+.hero-voluntariado {
+  text-align: center;
+  background-color: #f0f4f8;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+}
+
+.hero-voluntariado h1 {
+  font-size: 2.5rem;
+  color: #2a7ae4;
+  margin-bottom: 1rem;
+}
+
+.hero-voluntariado p {
+  font-size: 1.125rem;
+  color: #333;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+  .hero-voluntariado h1 { font-size: 2rem; }
+  .hero-voluntariado p { font-size: 1rem; }
+  .cadastro-voluntario {
+    padding: 1.5rem;
+  }
+  .cadastro-voluntario input,
+  .cadastro-voluntario textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-voluntariado h1 { font-size: 1.5rem; }
+  .hero-voluntariado p { font-size: 0.9rem; }
+
+  .cadastro-voluntario fieldset:nth-of-type(3) label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+
+  .cadastro-voluntario input,
+  .cadastro-voluntario textarea {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================= BOTÃO VOLUNTARIADO HERO (mesmo padrão do cadastro) ================= */
+#btn-cadastro {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #2a7ae4; /* mesma cor do botão enviar cadastro */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#btn-cadastro:hover {
+  background-color: #1e5bb8; /* mesma cor do hover do botão enviar cadastro */
+}
+
+/* ================= PROJETOS ================= */
+.projeto-item {
+  background-color: var(--cor-clara);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.projeto-item picture,
+.projeto-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.projeto-item h2 {
+  font-size: var(--fs-lg);
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+.projeto-item p {
+  font-size: var(--fs-md);
+  color: var(--cor-texto);
+}
