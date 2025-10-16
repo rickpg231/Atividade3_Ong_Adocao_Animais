@@ -11,7 +11,7 @@ As páginas principais continuam sendo: `index.html`, `projetos.html`, `cadastro
 
 ## Acesse o site
 - Você pode acessar a versão publicada no GitHub Pages:  
-  https://rickpg231.github.io/Atividade3_Ong_Doacao_Animais/
+  https://rickpg231.github.io/Atividade3_Ong_Adocao_Animais/
 
 ---
 
